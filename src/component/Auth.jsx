@@ -7,9 +7,6 @@ export default function Auth() {
     const [password,setPassword] = useState("");
     const [error,setError] = useState("");
 
-    console.log(auth?.currentUser?.email);
-
-
     const createAccount = async ()=>{
         try{
             await createUserWithEmailAndPassword(auth,email,password);
@@ -26,6 +23,8 @@ export default function Auth() {
             await signInWithEmailAndPassword(auth, email,password);
         }catch(e){
             console.error(e)
+            setEmail('');
+            setPassword('');
         }
     }
 
