@@ -15,7 +15,7 @@ export default function Auth() {
         }
         setEmail('');
         setPassword('');
-        console.log("User Created Successfully...");
+        console.log("Hurrah ...User Created Successfully...");
     }
 
     const signIn = async ()=>{
